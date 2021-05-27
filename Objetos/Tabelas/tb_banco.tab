@@ -1,0 +1,15 @@
+create table TB_BANCO
+(
+  cod_banco       NUMBER(19) not null,
+  cod_ins         NUMBER(10),
+  dat_ins         TIMESTAMP(6),
+  dat_ult_atu     TIMESTAMP(6),
+  des_banco       VARCHAR2(255 CHAR),
+  nom_pro_ult_atu VARCHAR2(255 CHAR),
+  nom_usu_ult_atu VARCHAR2(255 CHAR),
+  num_seq_envio   NUMBER(10)
+)
+;
+alter table TB_BANCO
+  add primary key (COD_BANCO);
+

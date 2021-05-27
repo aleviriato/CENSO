@@ -1,0 +1,33 @@
+create table TB_DOMINIO_DETALHE
+(
+  id                NUMBER(19) not null,
+  authority         VARCHAR2(255 CHAR),
+  cod               VARCHAR2(1020 CHAR),
+  cod_domain_detail VARCHAR2(1020 CHAR),
+  date_hour_created TIMESTAMP(6),
+  date_hour_updated TIMESTAMP(6),
+  description       VARCHAR2(1020 CHAR),
+  directory         VARCHAR2(255 CHAR),
+  domain_id         NUMBER(19) not null,
+  dt_created        TIMESTAMP(6),
+  dt_enabled        TIMESTAMP(6),
+  dt_updated        TIMESTAMP(6),
+  enabled           NUMBER(1),
+  is_editable       NUMBER(1),
+  name              VARCHAR2(1020 CHAR),
+  user_created_id   NUMBER(19),
+  user_updated_id   NUMBER(19)
+)
+;
+alter table TB_DOMINIO_DETALHE
+  add primary key (ID);
+alter table TB_DOMINIO_DETALHE
+  add constraint FK_FWEH254FTEPUB1A8R2EYHWQVG foreign key (USER_UPDATED_ID)
+  references TB_USUARIO (ID);
+alter table TB_DOMINIO_DETALHE
+  add constraint FK_N9OWRHQFY0QCE8YS3VMTJMCO9 foreign key (DOMAIN_ID)
+  references TB_DOMINIO (ID);
+alter table TB_DOMINIO_DETALHE
+  add constraint FK_62EUPIUELO0L12N2T1VQ0NIFC foreign key (USER_CREATED_ID)
+  references TB_USUARIO (ID);
+

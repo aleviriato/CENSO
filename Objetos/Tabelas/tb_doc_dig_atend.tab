@@ -1,0 +1,48 @@
+create table TB_DOC_DIG_ATEND
+(
+  id                       NUMBER(19) not null,
+  cod_ins                  NUMBER(10),
+  beneficiario_id          NUMBER(19),
+  url_doc                  VARCHAR2(255),
+  name_doc                 VARCHAR2(255),
+  dat_criacao              DATE,
+  nom_usu_criacao          VARCHAR2(255),
+  nom_pro_criacao          VARCHAR2(255),
+  flag_recenseamento       NUMBER(1),
+  dat_recenseamento        DATE,
+  ano                      NUMBER(4),
+  documento_atendimento_id NUMBER(19),
+  local_des                VARCHAR2(255) default 'SYSTEM_LOCAL'
+)
+;
+comment on table TB_DOC_DIG_ATEND
+  is 'Tabela que guarda ocaminho dos documentos dos beneficiarios ao fim do atendimento';
+comment on column TB_DOC_DIG_ATEND.id
+  is 'Identificador do documento do atendimento';
+comment on column TB_DOC_DIG_ATEND.cod_ins
+  is 'Codigo do instituto';
+comment on column TB_DOC_DIG_ATEND.beneficiario_id
+  is 'Identificador do beneficiario';
+comment on column TB_DOC_DIG_ATEND.url_doc
+  is 'Endereco URL do documento';
+comment on column TB_DOC_DIG_ATEND.name_doc
+  is 'Nome do documento';
+comment on column TB_DOC_DIG_ATEND.dat_criacao
+  is 'Data de criac?o registro';
+comment on column TB_DOC_DIG_ATEND.nom_usu_criacao
+  is 'Nome do usuario de criac?o do registro';
+comment on column TB_DOC_DIG_ATEND.nom_pro_criacao
+  is 'Nome do processo de criac?o';
+comment on column TB_DOC_DIG_ATEND.flag_recenseamento
+  is 'Campo que verifica se registro foi confirmado. 0 ou nulo:Nao 1:Sim';
+comment on column TB_DOC_DIG_ATEND.dat_recenseamento
+  is 'Data de verificac?o do registro confirmado';
+comment on column TB_DOC_DIG_ATEND.ano
+  is 'Ano de referencia do documento';
+comment on column TB_DOC_DIG_ATEND.documento_atendimento_id
+  is 'Id do documento de atendimento, referente a tabela TB_DOCUMENTO_ATENDIMENTO';
+comment on column TB_DOC_DIG_ATEND.local_des
+  is 'Descricao de onde vai ser armazenado os arquivos - SYSTEM_LOCAL(Armazenamento local) ou AMAZON (externo)';
+alter table TB_DOC_DIG_ATEND
+  add constraint PK_DOC_DIG_ATEND primary key (ID);
+

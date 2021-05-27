@@ -1,0 +1,15 @@
+create table TB_END_LOCALIDADE
+(
+  id             NUMBER(10) not null,
+  cep            VARCHAR2(20 CHAR),
+  cod_tipo       VARCHAR2(1 CHAR),
+  cod_uf         VARCHAR2(2 CHAR),
+  id_municipio   VARCHAR2(18 CHAR),
+  nom_abreviado  VARCHAR2(80 CHAR),
+  nom_localidade VARCHAR2(150 CHAR),
+  tipo           VARCHAR2(20 CHAR)
+)
+;
+alter table TB_END_LOCALIDADE
+  add primary key (ID);
+

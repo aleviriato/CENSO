@@ -1,0 +1,7 @@
+create sequence SEQ_SUARIO
+minvalue 1
+maxvalue 9999999999999999999999999999
+start with 263360
+increment by 1
+nocache;
+

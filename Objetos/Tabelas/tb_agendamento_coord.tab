@@ -1,0 +1,17 @@
+create table TB_AGENDAMENTO_COORD
+(
+  id           NUMBER(19) not null,
+  dat_ini      DATE,
+  dat_fim      DATE,
+  num_atds     NUMBER(9),
+  num_min_atd  NUMBER(9),
+  per1_ini_atd VARCHAR2(255),
+  per1_fim_atd VARCHAR2(255),
+  per2_ini_atd VARCHAR2(255),
+  per2_fim_atd VARCHAR2(255),
+  flg_publica  NUMBER(1)
+)
+;
+alter table TB_AGENDAMENTO_COORD
+  add constraint TB_AGENDAMENTO_COORD_PK primary key (ID);
+

@@ -1,0 +1,29 @@
+create table TB_USUARIO
+(
+  id                 NUMBER(19) not null,
+  account_expired    NUMBER(1) not null,
+  account_locked     NUMBER(1) not null,
+  active             NUMBER(1),
+  dat_term_resp      TIMESTAMP(6),
+  enabled            NUMBER(1) not null,
+  flag_term_resp     NUMBER(1),
+  "password"         VARCHAR2(255 CHAR) not null,
+  password_expired   NUMBER(1) not null,
+  pessoa_fisica_id   NUMBER(19) not null,
+  username           VARCHAR2(255 CHAR) not null,
+  flag_final_pre_cad NUMBER(1) default 0,
+  dat_final_pre_cad  TIMESTAMP(6),
+  flag_first_access  NUMBER(1) default 1,
+  local_id           NUMBER(19)
+)
+;
+alter table TB_USUARIO
+  add primary key (ID);
+alter table TB_USUARIO
+  add constraint TB_USUARIO_UK1 unique (PESSOA_FISICA_ID);
+alter table TB_USUARIO
+  add constraint UK_HGHFWYHCK5X7U43T4JDEWX2SJ unique (USERNAME);
+alter table TB_USUARIO
+  add constraint FK_6CR01TD8QO2FLWFXWATUF41B9 foreign key (PESSOA_FISICA_ID)
+  references TB_PESSOA_FISICA (ID);
+

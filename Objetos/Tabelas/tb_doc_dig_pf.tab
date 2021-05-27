@@ -1,0 +1,28 @@
+create table TB_DOC_DIG_PF
+(
+  id                   NUMBER(19) not null,
+  cod_grupo_doc_dig    NUMBER(10) default 5,
+  cod_ins              NUMBER(10),
+  cod_tipo_doc_dig     NUMBER(10),
+  dat_criacao          TIMESTAMP(6),
+  dat_recadastramento  TIMESTAMP(6),
+  dat_recenseamento    TIMESTAMP(6),
+  flag_recadastramento NUMBER(1),
+  flag_recenseamento   NUMBER(1),
+  local_des            VARCHAR2(255 CHAR) default 'SYSTEM_LOCAL',
+  name_doc             VARCHAR2(255 CHAR),
+  nom_pro_criacao      VARCHAR2(255 CHAR),
+  nom_usu_criacao      VARCHAR2(255 CHAR),
+  url_doc              VARCHAR2(255 CHAR),
+  documento_pessoa_id  NUMBER(19),
+  beneficiario_id      NUMBER(19),
+  dependente_id        NUMBER(19)
+)
+;
+comment on column TB_DOC_DIG_PF.beneficiario_id
+  is 'Beneficiario';
+comment on column TB_DOC_DIG_PF.dependente_id
+  is 'Dependente do Beneficiario';
+alter table TB_DOC_DIG_PF
+  add primary key (ID);
+

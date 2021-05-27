@@ -1,0 +1,7 @@
+create sequence SEQ_ND_PESSOA_FISICA
+minvalue 1
+maxvalue 9999999999999999999999999999
+start with 520468
+increment by 1
+nocache;
+

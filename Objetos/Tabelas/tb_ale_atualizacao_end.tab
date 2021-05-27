@@ -1,0 +1,7 @@
+create table TB_ALE_ATUALIZACAO_END
+(
+  cod_ide_cli VARCHAR2(20 CHAR),
+  flg_status  CHAR(1)
+)
+compress;
+

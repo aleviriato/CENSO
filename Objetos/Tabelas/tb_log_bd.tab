@@ -1,0 +1,12 @@
+create table TB_LOG_BD
+(
+  id         NUMBER not null,
+  dat_ocor   DATE not null,
+  nom_evento VARCHAR2(150),
+  des_chave  VARCHAR2(300),
+  des_msg    VARCHAR2(4000)
+)
+;
+alter table TB_LOG_BD
+  add constraint PK_TB_LOG_BD primary key (ID);
+

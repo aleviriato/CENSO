@@ -1,0 +1,10 @@
+create table TB_CARGO
+(
+  id            NUMBER(10) not null,
+  flg_exige_cnh NUMBER(1),
+  nom_cargo     VARCHAR2(300 CHAR)
+)
+;
+alter table TB_CARGO
+  add primary key (ID);
+

@@ -1,0 +1,17 @@
+create table TB_END_LOGRADOURO
+(
+  id              NUMBER(10) not null,
+  cep             VARCHAR2(20 CHAR),
+  cod_uf          VARCHAR2(2 CHAR),
+  des_complemento VARCHAR2(100 CHAR),
+  id_bairro_fim   NUMBER(10),
+  id_bairro_ini   NUMBER(10),
+  id_localidade   NUMBER(10),
+  nom_abreviado   VARCHAR2(80 CHAR),
+  nom_logradouro  VARCHAR2(150 CHAR),
+  nom_tipo        VARCHAR2(50 CHAR)
+)
+;
+alter table TB_END_LOGRADOURO
+  add primary key (ID);
+

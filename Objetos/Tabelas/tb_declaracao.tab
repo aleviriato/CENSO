@@ -1,0 +1,14 @@
+create table TB_DECLARACAO
+(
+  id           NUMBER(19) not null,
+  cod_ide_cli  VARCHAR2(255 CHAR),
+  dat_ger_decl TIMESTAMP(6)
+)
+;
+alter table TB_DECLARACAO
+  add primary key (ID);
+alter table TB_DECLARACAO
+  add constraint UK_Q743PNILRDDDONHGUV385DUMH unique (COD_IDE_CLI)
+  disable
+  novalidate;
+

@@ -1,0 +1,35 @@
+create table TB_AGENDAMENTO
+(
+  id                  NUMBER(19) not null,
+  cod_entidade        VARCHAR2(255 CHAR),
+  dat_agendamento     TIMESTAMP(6),
+  dat_ger_prot        TIMESTAMP(6),
+  hora_final          VARCHAR2(5),
+  hora_inicio         VARCHAR2(5),
+  local_id            NUMBER(19),
+  pessoa_fisica_id    NUMBER(19),
+  regiao_id           NUMBER(19),
+  tipo                VARCHAR2(255 CHAR),
+  motivo_alteracao    VARCHAR2(512),
+  flg_recadastramento NUMBER(1),
+  dat_recadastramento TIMESTAMP(6),
+  flg_recenseamento   NUMBER(1),
+  dat_recenseamento   TIMESTAMP(6),
+  dat_criacao         TIMESTAMP(6),
+  dat_ult_atu         TIMESTAMP(6),
+  nom_usu_criacao     VARCHAR2(255 CHAR),
+  nom_usu_ult_atu     VARCHAR2(255 CHAR)
+)
+;
+alter table TB_AGENDAMENTO
+  add primary key (ID);
+alter table TB_AGENDAMENTO
+  add constraint FK_DSLPQ3WS70BJ0O7WAGHJGRU05 foreign key (LOCAL_ID)
+  references TB_LOCAL (ID);
+alter table TB_AGENDAMENTO
+  add constraint FK_H8227FOT22LPS0P41SQSID8NK foreign key (REGIAO_ID)
+  references TB_REGIAO (ID);
+alter table TB_AGENDAMENTO
+  add constraint FK_5F0OADUXB04F5K2OQGVMP9TC6 foreign key (PESSOA_FISICA_ID)
+  references TB_PESSOA_FISICA (ID);
+

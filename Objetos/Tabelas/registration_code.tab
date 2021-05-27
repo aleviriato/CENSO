@@ -1,0 +1,11 @@
+create table REGISTRATION_CODE
+(
+  id           NUMBER(19) not null,
+  date_created TIMESTAMP(6) not null,
+  token        VARCHAR2(255 CHAR) not null,
+  username     VARCHAR2(255 CHAR) not null
+)
+;
+alter table REGISTRATION_CODE
+  add primary key (ID);
+

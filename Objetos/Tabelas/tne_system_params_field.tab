@@ -1,0 +1,12 @@
+create table TNE_SYSTEM_PARAMS_FIELD
+(
+  id              NUMBER(19) not null,
+  description     VARCHAR2(1020 CHAR),
+  field_type      VARCHAR2(255 CHAR),
+  name            VARCHAR2(1020 CHAR),
+  order_number    NUMBER(19),
+  param_value     CLOB,
+  systemparams_id NUMBER(19) not null
+)
+;
+

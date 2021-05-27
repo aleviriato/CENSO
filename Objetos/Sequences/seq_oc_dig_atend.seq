@@ -1,0 +1,7 @@
+create sequence SEQ_OC_DIG_ATEND
+minvalue 1
+maxvalue 9999999999999999999999999999
+start with 12941
+increment by 1
+cache 20;
+

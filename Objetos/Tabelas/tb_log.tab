@@ -1,0 +1,19 @@
+create table TB_LOG
+(
+  id          NUMBER(19) not null,
+  cpf         VARCHAR2(255 CHAR),
+  date_event  TIMESTAMP(6),
+  description VARCHAR2(2048 CHAR),
+  type        VARCHAR2(255 CHAR),
+  usuario_id  NUMBER(19),
+  token       VARCHAR2(4000)
+)
+;
+alter table TB_LOG
+  add primary key (ID);
+alter table TB_LOG
+  add constraint TB_LOG_FK1 foreign key (USUARIO_ID)
+  references TB_USUARIO (ID)
+  disable
+  novalidate;
+

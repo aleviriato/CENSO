@@ -1,0 +1,12 @@
+create table TB_HIST_PERIODO_CENSO
+(
+  id              NUMBER,
+  dat_ini         DATE,
+  dat_fim         DATE,
+  dat_ing         DATE,
+  dat_ult_atu     DATE,
+  nom_usu_ult_atu VARCHAR2(40),
+  nom_pro_ult_atu VARCHAR2(40)
+)
+compress;
+

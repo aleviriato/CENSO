@@ -1,0 +1,15 @@
+create table TB_LOCAL_REGIOES
+(
+  local_id  NUMBER(19) not null,
+  regiao_id NUMBER(19) not null
+)
+;
+alter table TB_LOCAL_REGIOES
+  add primary key (LOCAL_ID, REGIAO_ID);
+alter table TB_LOCAL_REGIOES
+  add constraint FK_H953QVIH69BG1X3CK76IH7SD6 foreign key (LOCAL_ID)
+  references TB_LOCAL (ID);
+alter table TB_LOCAL_REGIOES
+  add constraint FK_Q0OL0WLHPI86LA1Y7UA0U9OCH foreign key (REGIAO_ID)
+  references TB_REGIAO (ID);
+

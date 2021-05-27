@@ -1,0 +1,21 @@
+create table TNE_SYSTEM_PARAMS
+(
+  id                NUMBER(19) not null,
+  cod               VARCHAR2(1020 CHAR),
+  cod_param         VARCHAR2(1020 CHAR),
+  date_hour_created TIMESTAMP(6),
+  date_hour_updated TIMESTAMP(6),
+  desc_param        VARCHAR2(1020 CHAR),
+  is_editable       NUMBER(19) not null,
+  name_param        VARCHAR2(1020 CHAR),
+  num_param         NUMBER(19),
+  preview           VARCHAR2(255 CHAR),
+  text_param        VARCHAR2(1020 CHAR),
+  type_param        VARCHAR2(1020 CHAR),
+  user_created_id   NUMBER(19),
+  user_updated_id   NUMBER(19)
+)
+;
+alter table TNE_SYSTEM_PARAMS
+  add primary key (ID);
+

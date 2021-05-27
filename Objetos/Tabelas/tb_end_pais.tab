@@ -1,0 +1,12 @@
+create table TB_END_PAIS
+(
+  id           NUMBER(10) not null,
+  cod          VARCHAR2(255 CHAR),
+  dat_criacao  TIMESTAMP(6),
+  dat_extincao TIMESTAMP(6),
+  nom_pais     VARCHAR2(150 CHAR)
+)
+;
+alter table TB_END_PAIS
+  add primary key (ID);
+

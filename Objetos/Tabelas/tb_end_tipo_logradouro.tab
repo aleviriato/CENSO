@@ -1,0 +1,10 @@
+create table TB_END_TIPO_LOGRADOURO
+(
+  id       NUMBER(10) not null,
+  cod      VARCHAR2(255 CHAR),
+  nom_tipo VARCHAR2(255 CHAR)
+)
+;
+alter table TB_END_TIPO_LOGRADOURO
+  add primary key (ID);
+

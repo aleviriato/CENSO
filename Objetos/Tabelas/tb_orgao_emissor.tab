@@ -1,0 +1,9 @@
+create table TB_ORGAO_EMISSOR
+(
+  id               NUMBER(10) not null,
+  ds_orgao_emissor VARCHAR2(255 CHAR)
+)
+;
+alter table TB_ORGAO_EMISSOR
+  add primary key (ID);
+

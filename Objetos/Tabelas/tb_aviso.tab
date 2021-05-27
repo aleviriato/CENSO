@@ -1,0 +1,10 @@
+create table TB_AVISO
+(
+  id                   NUMBER(19) not null,
+  cod_tela_sistema     NUMBER(19),
+  cod_posicao_mensagem NUMBER(19),
+  mensagem             VARCHAR2(4000),
+  mensagem_completa    CLOB
+)
+;
+

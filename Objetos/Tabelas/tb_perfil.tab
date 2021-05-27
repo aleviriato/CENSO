@@ -1,0 +1,11 @@
+create table TB_PERFIL
+(
+  id        NUMBER(19) not null,
+  authority VARCHAR2(255 CHAR) not null
+)
+;
+alter table TB_PERFIL
+  add primary key (ID);
+alter table TB_PERFIL
+  add constraint UK_M8OMVER4E3PI8SFRRW3C9K61G unique (AUTHORITY);
+

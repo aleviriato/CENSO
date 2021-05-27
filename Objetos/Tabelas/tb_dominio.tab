@@ -1,0 +1,28 @@
+create table TB_DOMINIO
+(
+  id                NUMBER(19) not null,
+  cod_domain        VARCHAR2(1020 CHAR),
+  date_hour_created TIMESTAMP(6),
+  date_hour_updated TIMESTAMP(6),
+  description       VARCHAR2(1020 CHAR),
+  dt_created        TIMESTAMP(6),
+  dt_enabled        TIMESTAMP(6),
+  dt_updated        TIMESTAMP(6),
+  enabled           NUMBER(1),
+  is_editable       NUMBER(1),
+  name              VARCHAR2(1020 CHAR),
+  user_created_id   NUMBER(19),
+  user_updated_id   NUMBER(19)
+)
+;
+alter table TB_DOMINIO
+  add primary key (ID);
+alter table TB_DOMINIO
+  add constraint UK_EQM539NTU466KPI7HD9713UBW unique (NAME);
+alter table TB_DOMINIO
+  add constraint FK_RHICH0DRNW8NO0TN0OR8PADX2 foreign key (USER_CREATED_ID)
+  references TB_USUARIO (ID);
+alter table TB_DOMINIO
+  add constraint FK_44UKKPU8HN2R04N4RC0LC62Y9 foreign key (USER_UPDATED_ID)
+  references TB_USUARIO (ID);
+

@@ -1,0 +1,18 @@
+create table TB_CONTATO
+(
+  id                    NUMBER(19) not null,
+  dat_contato           TIMESTAMP(6),
+  usuario_contato_id    NUMBER(19) not null,
+  usuario_id            NUMBER(19) not null,
+  observacao            VARCHAR2(4000) not null,
+  dat_criacao           TIMESTAMP(6),
+  dat_ult_atu           TIMESTAMP(6),
+  nom_usu_criacao       VARCHAR2(255),
+  nom_usu_ult_atu       VARCHAR2(255),
+  agendamento_id        NUMBER(19),
+  cod_forma_atendimento NUMBER(19)
+)
+;
+alter table TB_CONTATO
+  add constraint TB_CONTATO_PK primary key (ID);
+

@@ -1,0 +1,27 @@
+create table TB_ACOMP_UNIAO_ESTAVEL
+(
+  id              NUMBER not null,
+  cod_ide_cli     VARCHAR2(20) not null,
+  num_cpf         VARCHAR2(11) not null,
+  nom_companheiro VARCHAR2(80) not null,
+  dat_ini_per     TIMESTAMP(6) not null,
+  dat_fim_per     TIMESTAMP(6),
+  dat_ing         DATE not null,
+  dat_ult_atu     DATE not null,
+  nom_usu_ult_atu VARCHAR2(40) not null,
+  nom_pro_ult_atu VARCHAR2(40) not null
+)
+compress;
+comment on column TB_ACOMP_UNIAO_ESTAVEL.cod_ide_cli
+  is 'Identificador do Servidor';
+comment on column TB_ACOMP_UNIAO_ESTAVEL.num_cpf
+  is 'Cpf do companheiro';
+comment on column TB_ACOMP_UNIAO_ESTAVEL.nom_companheiro
+  is 'Nome do Companheiro';
+comment on column TB_ACOMP_UNIAO_ESTAVEL.dat_ini_per
+  is 'Data de Inicio da união estável';
+comment on column TB_ACOMP_UNIAO_ESTAVEL.dat_fim_per
+  is 'Data de Inicio da união estável';
+alter table TB_ACOMP_UNIAO_ESTAVEL
+  add constraint PK_ACOMP_UNIAO_ESTAVEL primary key (ID);
+

@@ -1,0 +1,17 @@
+create table TB_TMP_AGENDAMENTO_EXCEL
+(
+  id           NUMBER(19) not null,
+  cargo        VARCHAR2(255 CHAR),
+  cpf          VARCHAR2(255 CHAR),
+  data         VARCHAR2(255 CHAR),
+  data_nasc    VARCHAR2(255 CHAR),
+  desc_lotacao VARCHAR2(255 CHAR),
+  horario      VARCHAR2(255 CHAR),
+  lotacao      VARCHAR2(255 CHAR),
+  matricula    VARCHAR2(255 CHAR),
+  nome         VARCHAR2(255 CHAR),
+  secretaria   VARCHAR2(255 CHAR),
+  sexo         VARCHAR2(255 CHAR)
+)
+compress;
+

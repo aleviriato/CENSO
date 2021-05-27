@@ -1,0 +1,15 @@
+create table TB_USUARIO_PERFIL
+(
+  perfil_id  NUMBER(19) not null,
+  usuario_id NUMBER(19) not null
+)
+;
+alter table TB_USUARIO_PERFIL
+  add primary key (PERFIL_ID, USUARIO_ID);
+alter table TB_USUARIO_PERFIL
+  add constraint FK_HRVQY03TYAM5S3LWX2NEP7SCL foreign key (PERFIL_ID)
+  references TB_PERFIL (ID);
+alter table TB_USUARIO_PERFIL
+  add constraint FK_ML4D2PKD7C3E6QAWIRUU92SA5 foreign key (USUARIO_ID)
+  references TB_USUARIO (ID);
+

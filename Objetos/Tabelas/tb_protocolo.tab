@@ -1,0 +1,18 @@
+create table TB_PROTOCOLO
+(
+  id           NUMBER(19) not null,
+  cod_ide_cli  VARCHAR2(255 CHAR),
+  dat_ger_prot TIMESTAMP(6),
+  id_usu_prot  NUMBER(19)
+)
+;
+comment on column TB_PROTOCOLO.id_usu_prot
+  is 'Coluna que guarda o usuario que gerou o protocolo de recadastramento';
+alter table TB_PROTOCOLO
+  add primary key (ID);
+alter table TB_PROTOCOLO
+  add constraint UK_8CF2TPA3VG9PQHRGPY28DTBBW unique (COD_IDE_CLI);
+alter table TB_PROTOCOLO
+  add constraint FK_PROTOCOLO_01 foreign key (ID_USU_PROT)
+  references TB_USUARIO (ID);
+

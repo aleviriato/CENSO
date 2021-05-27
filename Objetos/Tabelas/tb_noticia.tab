@@ -1,0 +1,12 @@
+create table TB_NOTICIA
+(
+  id          NUMBER(11) not null,
+  mes         VARCHAR2(2) not null,
+  data_inicio DATE not null,
+  data_fim    DATE not null,
+  noticia     VARCHAR2(4000) not null
+)
+;
+alter table TB_NOTICIA
+  add constraint TB_NOTICIA_PK primary key (ID);
+

@@ -1,0 +1,7 @@
+create sequence SEQ_OC_DIG_PF
+minvalue 1
+maxvalue 9999999999999999999999999999
+start with 66904
+increment by 1
+nocache;
+

@@ -1,0 +1,11 @@
+create table TB_ENTIDADE
+(
+  id     NUMBER(19) not null,
+  cod    VARCHAR2(255 CHAR),
+  name   VARCHAR2(255 CHAR),
+  symbol VARCHAR2(255 CHAR)
+)
+;
+alter table TB_ENTIDADE
+  add primary key (ID);
+

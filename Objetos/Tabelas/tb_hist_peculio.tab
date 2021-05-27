@@ -1,0 +1,38 @@
+create table TB_HIST_PECULIO
+(
+  id                    NUMBER(10) not null,
+  cod_ins               NUMBER(10),
+  cod_ide_cli           VARCHAR2(255),
+  num_cpf               VARCHAR2(14) not null,
+  cod_grau_parentesco   VARCHAR2(5) not null,
+  dat_nasc              TIMESTAMP(6) not null,
+  nom_pessoa_fisica     VARCHAR2(60) not null,
+  email                 VARCHAR2(512),
+  cod_sexo              VARCHAR2(5) not null,
+  cod_est_civ           VARCHAR2(5),
+  num_cep               VARCHAR2(255),
+  nom_logradouro        VARCHAR2(80) not null,
+  num_numero            VARCHAR2(20) not null,
+  des_complemento       VARCHAR2(30),
+  dat_criacao           TIMESTAMP(6),
+  nom_usu_criacao       VARCHAR2(255),
+  nom_pro_criacao       VARCHAR2(255),
+  dat_ult_atu           TIMESTAMP(6),
+  nom_usu_ult_atu       VARCHAR2(255),
+  nom_pro_ult_atu       VARCHAR2(255),
+  dat_recadastramento   TIMESTAMP(6),
+  flag_recadastramento  NUMBER(1),
+  flag_recenseamento    NUMBER(1),
+  dat_recenseamento     TIMESTAMP(6),
+  num_tel_fone1         VARCHAR2(20) not null,
+  cod_tel_fone1         VARCHAR2(5),
+  pais_id               NUMBER(10),
+  cod_bairro_id         NUMBER(10),
+  cod_municipio_id      NUMBER(10),
+  cod_uf_id             NUMBER(19),
+  cod_tip_logradouro_id NUMBER(10) not null,
+  grau_parentesco       VARCHAR2(60),
+  id_hist_per_censo     NUMBER
+)
+compress;
+

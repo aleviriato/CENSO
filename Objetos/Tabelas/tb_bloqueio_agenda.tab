@@ -1,0 +1,13 @@
+create table TB_BLOQUEIO_AGENDA
+(
+  id          NUMBER(19) not null,
+  dat_ini     TIMESTAMP(6),
+  dat_fim     TIMESTAMP(6),
+  motivo      VARCHAR2(510),
+  flg_feriado NUMBER(1),
+  local_id    NUMBER(19)
+)
+;
+alter table TB_BLOQUEIO_AGENDA
+  add constraint TB_BLOQUEIO_AGENDA_PK primary key (ID);
+

@@ -1,0 +1,17 @@
+create table TB_DOC_ATENDIMENTO
+(
+  id                     NUMBER(19) not null,
+  cod_ins                NUMBER(10),
+  beneficiario_id        NUMBER(19),
+  dependente_id          NUMBER(19),
+  representante_legal_id NUMBER(19),
+  url_doc                VARCHAR2(255),
+  name_doc               VARCHAR2(255),
+  dat_criacao            DATE,
+  nom_usu_criacao        VARCHAR2(255),
+  nom_pro_criacao        VARCHAR2(255),
+  flag_recenseamento     NUMBER(1),
+  dat_recenseamento      DATE
+)
+;
+

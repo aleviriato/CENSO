@@ -1,0 +1,9 @@
+create table TB_REGIAO
+(
+  id   NUMBER(19) not null,
+  nome VARCHAR2(60 CHAR)
+)
+;
+alter table TB_REGIAO
+  add primary key (ID);
+

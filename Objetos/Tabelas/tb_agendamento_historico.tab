@@ -1,0 +1,28 @@
+create table TB_AGENDAMENTO_HISTORICO
+(
+  id                   NUMBER(19) not null,
+  cod_entidade         VARCHAR2(255 CHAR),
+  dat_agendamento      TIMESTAMP(6),
+  dat_ger_prot         TIMESTAMP(6),
+  hora_final           VARCHAR2(5),
+  hora_inicio          VARCHAR2(5),
+  local_id             NUMBER(19),
+  pessoa_fisica_id     NUMBER(19),
+  regiao_id            NUMBER(19),
+  tipo                 VARCHAR2(255 CHAR),
+  motivo_alteracao     VARCHAR2(512),
+  flg_recadastramento  NUMBER(1),
+  dat_recadastramento  TIMESTAMP(6),
+  flg_recenseamento    NUMBER(1),
+  dat_recenseamento    TIMESTAMP(6),
+  dat_criacao          TIMESTAMP(6),
+  dat_ult_atu          TIMESTAMP(6),
+  nom_usu_criacao      VARCHAR2(255 CHAR),
+  nom_usu_ult_atu      VARCHAR2(255 CHAR),
+  nom_evento_historico VARCHAR2(255 CHAR)
+)
+;
+create unique index PK_RECENS_HIST on TB_AGENDAMENTO_HISTORICO (ID);
+alter table TB_AGENDAMENTO_HISTORICO
+  add primary key (ID);
+

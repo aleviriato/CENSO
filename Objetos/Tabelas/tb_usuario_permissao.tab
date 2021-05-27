@@ -1,0 +1,42 @@
+create table TB_USUARIO_PERMISSAO
+(
+  id                 NUMBER(19) not null,
+  dat_final          TIMESTAMP(6),
+  dat_inicio         TIMESTAMP(6),
+  hora_entrada_dom   VARCHAR2(255 CHAR),
+  hora_entrada_qua   VARCHAR2(255 CHAR),
+  hora_entrada_qui   VARCHAR2(255 CHAR),
+  hora_entrada_sab   VARCHAR2(255 CHAR),
+  hora_entrada_seg   VARCHAR2(255 CHAR),
+  hora_entrada_sex   VARCHAR2(255 CHAR),
+  hora_entrada_ter   VARCHAR2(255 CHAR),
+  hora_saida_dom     VARCHAR2(255 CHAR),
+  hora_saida_qua     VARCHAR2(255 CHAR),
+  hora_saida_qui     VARCHAR2(255 CHAR),
+  hora_saida_ref_dom VARCHAR2(255 CHAR),
+  hora_saida_ref_qua VARCHAR2(255 CHAR),
+  hora_saida_ref_qui VARCHAR2(255 CHAR),
+  hora_saida_ref_sab VARCHAR2(255 CHAR),
+  hora_saida_ref_seg VARCHAR2(255 CHAR),
+  hora_saida_ref_sex VARCHAR2(255 CHAR),
+  hora_saida_ref_ter VARCHAR2(255 CHAR),
+  hora_saida_sab     VARCHAR2(255 CHAR),
+  hora_saida_seg     VARCHAR2(255 CHAR),
+  hora_saida_sex     VARCHAR2(255 CHAR),
+  hora_saida_ter     VARCHAR2(255 CHAR),
+  hora_volta_ref_dom VARCHAR2(255 CHAR),
+  hora_volta_ref_qua VARCHAR2(255 CHAR),
+  hora_volta_ref_qui VARCHAR2(255 CHAR),
+  hora_volta_ref_sab VARCHAR2(255 CHAR),
+  hora_volta_ref_seg VARCHAR2(255 CHAR),
+  hora_volta_ref_sex VARCHAR2(255 CHAR),
+  hora_volta_ref_ter VARCHAR2(255 CHAR),
+  usuario_id         NUMBER(19)
+)
+;
+alter table TB_USUARIO_PERMISSAO
+  add primary key (ID);
+alter table TB_USUARIO_PERMISSAO
+  add constraint FK_PEPTTV211APGWEWSFO9PJ6A18 foreign key (USUARIO_ID)
+  references TB_USUARIO (ID);
+

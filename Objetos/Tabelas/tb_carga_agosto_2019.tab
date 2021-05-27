@@ -1,0 +1,8 @@
+create table TB_CARGA_AGOSTO_2019
+(
+  nome        VARCHAR2(100),
+  cpf         VARCHAR2(20),
+  cod_ide_cli VARCHAR2(20)
+)
+compress;
+

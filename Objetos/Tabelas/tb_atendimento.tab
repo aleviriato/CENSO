@@ -1,0 +1,37 @@
+create table TB_ATENDIMENTO
+(
+  id                       NUMBER(19) not null,
+  agendamento_id           NUMBER(19),
+  atendente_id             NUMBER(19),
+  cod_mot_nao_finalizado   VARCHAR2(255 CHAR),
+  dat_fin_atend            TIMESTAMP(6),
+  dat_ini_atend            TIMESTAMP(6),
+  flg_no_prazo             NUMBER(1),
+  local_id                 NUMBER(19),
+  outro_motivo             VARCHAR2(255 CHAR),
+  regiao_id                NUMBER(19),
+  servidor_id              NUMBER(19),
+  historico_agendamento_id NUMBER(19)
+)
+;
+alter table TB_ATENDIMENTO
+  add primary key (ID);
+alter table TB_ATENDIMENTO
+  add constraint FK_APDGOCBXNUGPFBIL9BF4A987Q foreign key (REGIAO_ID)
+  references TB_REGIAO (ID);
+alter table TB_ATENDIMENTO
+  add constraint FK_BGJCMR10UTV6BXO6290TOO0SQ foreign key (SERVIDOR_ID)
+  references TB_PESSOA_FISICA (ID);
+alter table TB_ATENDIMENTO
+  add constraint FK_C5V26NTDCDLW6J445SCQFFAMN foreign key (AGENDAMENTO_ID)
+  references TB_AGENDAMENTO (ID);
+alter table TB_ATENDIMENTO
+  add constraint FK_28GU551D1OEHKQIKQTKQD0P12 foreign key (ATENDENTE_ID)
+  references TB_PESSOA_FISICA (ID);
+alter table TB_ATENDIMENTO
+  add constraint FK_9D9XAUEINEOKCJU2AAICWE69O foreign key (LOCAL_ID)
+  references TB_LOCAL (ID);
+alter table TB_ATENDIMENTO
+  add constraint TB_ATENDIMENTO_FK1 foreign key (HISTORICO_AGENDAMENTO_ID)
+  references TB_AGENDAMENTO_HISTORICO (ID);
+

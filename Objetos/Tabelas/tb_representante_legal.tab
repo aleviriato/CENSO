@@ -1,0 +1,48 @@
+create table TB_REPRESENTANTE_LEGAL
+(
+  id                    NUMBER(10) not null,
+  cod_bairro_id         NUMBER(10),
+  cod_cid_nasc          VARCHAR2(8 CHAR),
+  cod_est_civ           VARCHAR2(5 CHAR),
+  cod_ide_cli           VARCHAR2(255 CHAR),
+  cod_ins               NUMBER(10),
+  cod_municipio_id      NUMBER(10),
+  cod_nacio             VARCHAR2(5 CHAR),
+  cod_org_emi_rg        VARCHAR2(6 CHAR),
+  cod_pais_nasc         VARCHAR2(255 CHAR),
+  cod_sexo              VARCHAR2(5 CHAR),
+  cod_tel_fone1         VARCHAR2(5 CHAR),
+  cod_tip_logradouro_id NUMBER(10),
+  cod_uf_id             NUMBER(19),
+  cod_uf_emi_rg         VARCHAR2(4 CHAR),
+  cod_uf_nasc           VARCHAR2(2 CHAR),
+  dat_criacao           TIMESTAMP(6),
+  dat_emi_rg            TIMESTAMP(6),
+  dat_nasc              TIMESTAMP(6),
+  dat_recadastramento   TIMESTAMP(6),
+  dat_recenseamento     TIMESTAMP(6),
+  dat_ult_atu           TIMESTAMP(6),
+  des_complemento       VARCHAR2(30 CHAR),
+  email                 VARCHAR2(512 CHAR),
+  flag_recadastramento  NUMBER(1),
+  flag_recenseamento    NUMBER(1),
+  nom_logradouro        VARCHAR2(80 CHAR),
+  nom_pessoa_fisica     VARCHAR2(60 CHAR) not null,
+  nom_pro_criacao       VARCHAR2(255 CHAR),
+  nom_pro_ult_atu       VARCHAR2(255 CHAR),
+  nom_usu_criacao       VARCHAR2(255 CHAR),
+  nom_usu_ult_atu       VARCHAR2(255 CHAR),
+  num_cep               VARCHAR2(255 CHAR),
+  num_cpf               VARCHAR2(14 CHAR) not null,
+  num_numero            VARCHAR2(20 CHAR),
+  num_rg                VARCHAR2(20 CHAR),
+  num_tel_fone1         VARCHAR2(20 CHAR),
+  pais_id               NUMBER(10),
+  cod_ide_cli_rep       VARCHAR2(20),
+  num_cpf_alt           VARCHAR2(14),
+  cod_tip_representante VARCHAR2(5)
+)
+;
+alter table TB_REPRESENTANTE_LEGAL
+  add primary key (ID);
+

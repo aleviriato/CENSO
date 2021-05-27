@@ -1,0 +1,32 @@
+create table TB_BENEFICIARIO
+(
+  id                   NUMBER(10) not null,
+  cod_ide_cli          VARCHAR2(255 CHAR) not null,
+  cod_tipo_beneficio   VARCHAR2(255 CHAR) not null,
+  dat_fim_beneficio    TIMESTAMP(6),
+  dat_ini_beneficio    TIMESTAMP(6) not null,
+  flg_status           VARCHAR2(255 CHAR),
+  num_prontuario       VARCHAR2(255 CHAR) not null,
+  porc_beneficio       NUMBER(19,4) not null,
+  porc_rateio          NUMBER(19,4) not null,
+  cod_ins              NUMBER(8),
+  cod_entidade         VARCHAR2(8),
+  dat_criacao          TIMESTAMP(6),
+  nom_pro_criacao      VARCHAR2(255 CHAR),
+  nom_pro_ult_atu      VARCHAR2(255 CHAR),
+  nom_usu_criacao      VARCHAR2(255 CHAR),
+  nom_usu_ult_atu      VARCHAR2(255 CHAR),
+  dat_recadastramento  TIMESTAMP(6),
+  dat_recenseamento    TIMESTAMP(6),
+  dat_ult_atu          TIMESTAMP(6),
+  flag_recadastramento NUMBER(1),
+  flag_recenseamento   NUMBER(1),
+  cod_beneficio        NUMBER(19),
+  flg_complemento_inss NUMBER(1) default 0,
+  flg_peculio          NUMBER(1) default 0,
+  dat_concessao        TIMESTAMP(6)
+)
+;
+alter table TB_BENEFICIARIO
+  add primary key (ID);
+

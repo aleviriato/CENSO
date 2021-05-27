@@ -1,0 +1,30 @@
+create table TB_DOCUMENTO_ATENDIMENTO
+(
+  id                 NUMBER(19) not null,
+  nom_documento      VARCHAR2(255),
+  flg_registro_ativo NUMBER(1),
+  des_complementar   VARCHAR2(1024),
+  dat_criacao        DATE,
+  nom_usu_criacao    VARCHAR2(255),
+  nom_pro_criacao    VARCHAR2(255)
+)
+;
+comment on table TB_DOCUMENTO_ATENDIMENTO
+  is 'Tabela de tipos de Documentos de Atendimento existentes';
+comment on column TB_DOCUMENTO_ATENDIMENTO.id
+  is 'Identificador do tipo de documento do atendimento';
+comment on column TB_DOCUMENTO_ATENDIMENTO.nom_documento
+  is 'nome do tipo de documento de atendimento';
+comment on column TB_DOCUMENTO_ATENDIMENTO.flg_registro_ativo
+  is 'flag que indica se o documento esta ativo no sistema 0:N?o 1:Sim';
+comment on column TB_DOCUMENTO_ATENDIMENTO.des_complementar
+  is 'Descric?o complementar do tipo de documento de atendimento';
+comment on column TB_DOCUMENTO_ATENDIMENTO.dat_criacao
+  is 'Data de criac?o registro';
+comment on column TB_DOCUMENTO_ATENDIMENTO.nom_usu_criacao
+  is 'Nome do usuario de criac?o do registro';
+comment on column TB_DOCUMENTO_ATENDIMENTO.nom_pro_criacao
+  is 'Nome do processo de criac?o';
+alter table TB_DOCUMENTO_ATENDIMENTO
+  add constraint PK_DOCUMENTO_ATENDIMENTO primary key (ID);
+

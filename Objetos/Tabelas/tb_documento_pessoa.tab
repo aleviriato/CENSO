@@ -1,0 +1,22 @@
+create table TB_DOCUMENTO_PESSOA
+(
+  cod_tipo_pessoa        NUMBER(19),
+  cod_parentesco         NUMBER(19),
+  nom_documento          VARCHAR2(255),
+  flg_obrigatorio        NUMBER(1),
+  des_complementar       VARCHAR2(1024),
+  flg_registro_ativo     NUMBER(1),
+  id                     NUMBER(19) not null,
+  estado_civil_id        NUMBER(19),
+  flag_uniao_estavel     VARCHAR2(1),
+  flg_elaborais          VARCHAR2(255),
+  flag_uniao_estavel_bkp NUMBER(1),
+  flg_elaborais_bkp      VARCHAR2(1),
+  flg_permite_camera     VARCHAR2(1)
+)
+;
+alter table TB_DOCUMENTO_PESSOA
+  add constraint TB_DOCUMENTO_PESSOA_PK primary key (ID);
+alter table TB_DOCUMENTO_PESSOA
+  add constraint TB_DOCUMENTO_PESSOA_UK1 unique (COD_TIPO_PESSOA, COD_PARENTESCO, NOM_DOCUMENTO, FLG_OBRIGATORIO, DES_COMPLEMENTAR, FLG_REGISTRO_ATIVO, ESTADO_CIVIL_ID, FLAG_UNIAO_ESTAVEL, FLG_ELABORAIS);
+
